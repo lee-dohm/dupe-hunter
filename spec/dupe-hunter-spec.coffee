@@ -10,7 +10,7 @@ describe "DupeHunter", ->
     it 'encodes # as %23', ->
       text = 'issue#123'
 
-      expect(hunter.encodeURI(text)).toEqual(text.replace(/#/g, '%23'))
+      expect(hunter.encodeURI(text)).toEqual(text.replace(/#/, '%23'))
 
     it 'encodes ; as %3B', ->
       text = 'foo;bar'

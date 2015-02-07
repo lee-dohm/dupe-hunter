@@ -1,5 +1,5 @@
 module.exports =
-  encodeURI: (text) ->
+  uriEncode: (text) ->
     encodeURI(text).replace(/#/g, '%23').replace(/;/g, '%3B')
 
   getApiUrl: ->

@@ -1,21 +1,21 @@
 hunter = require '../lib/dupe-hunter'
 
 describe "DupeHunter", ->
-  describe 'encodeURI', ->
+  describe 'uriEncode', ->
     it 'encodes the text', ->
       text = 'some test text'
 
-      expect(hunter.encodeURI(text)).toEqual(encodeURI(text))
+      expect(hunter.uriEncode(text)).toEqual(encodeURI(text))
 
     it 'encodes # as %23', ->
       text = 'issue#123'
 
-      expect(hunter.encodeURI(text)).toEqual(text.replace(/#/, '%23'))
+      expect(hunter.uriEncode(text)).toEqual(text.replace(/#/, '%23'))
 
     it 'encodes ; as %3B', ->
       text = 'foo;bar'
 
-      expect(hunter.encodeURI(text)).toEqual(text.replace(/;/, '%3B'))
+      expect(hunter.uriEncode(text)).toEqual(text.replace(/;/, '%3B'))
 
   describe 'getApiUrl', ->
     it 'returns the issue search url', ->

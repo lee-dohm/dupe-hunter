@@ -28,6 +28,9 @@
     "url": "https://github.com/lee-dohm/dupe-hunter/issues"
   },
   "homepage": "https://github.com/lee-dohm/dupe-hunter",
+  "dependencies": {
+    "jquery": "^2"
+  },
   "devDependencies": {
     "jasmine-focused": "1.x",
     "grunt-contrib-coffee": "~0.7.0",

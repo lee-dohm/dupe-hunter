@@ -18,7 +18,7 @@ module.exports = (grunt) ->
       test: ['spec/*.coffee']
 
     shell:
-      spec:
+      test:
         command: "#{jasmine} --captureExceptions --coffee spec/"
         options:
           stdout: true
@@ -29,8 +29,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-shell')
   grunt.loadNpmTasks('grunt-coffeelint')
 
-  grunt.registerTask 'clean', -> require('rimraf').sync('lib')
-  grunt.registerTask('lint', ['coffeelint:src', 'coffeelint:test'])
-  grunt.registerTask('default', ['lint', 'spec'])
-  grunt.registerTask('spec', ['shell:spec'])
-  grunt.registerTask('test', ['spec'])
+  grunt.registerTask('lint', ['coffeelint'])
+  grunt.registerTask('default', ['coffee', 'lint'])
+  grunt.registerTask('test', ['coffee', 'lint', 'shell:test'])

@@ -1,0 +1,27 @@
+{
+  "name": "dupe-hunter",
+  "version": "0.1.0",
+  "description": "Determines if a given chunk of text will create a duplicate bug",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lee-dohm/dupe-hunter"
+  },
+  "keywords": [
+    "github",
+    "issue",
+    "dupe",
+    "duplicate",
+    "hunter",
+    "finder"
+  ],
+  "author": "Lee Dohm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lee-dohm/dupe-hunter/issues"
+  },
+  "homepage": "https://github.com/lee-dohm/dupe-hunter"
+}

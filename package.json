@@ -2,9 +2,10 @@
   "name": "dupe-hunter",
   "version": "0.1.0",
   "description": "Determines if a given chunk of text will create a duplicate bug",
-  "main": "index.coffee",
+  "main": "./lib/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "grunt clean lint coffee",
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,21 @@
     "finder"
   ],
   "author": "Lee Dohm",
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "url": "http://github.com/lee-dohm/dupe-hunter/raw/master/LICENSE.md"
+  },
   "bugs": {
     "url": "https://github.com/lee-dohm/dupe-hunter/issues"
   },
-  "homepage": "https://github.com/lee-dohm/dupe-hunter"
+  "homepage": "https://github.com/lee-dohm/dupe-hunter",
+  "devDependencies": {
+    "jasmine-focused": "1.x",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-cli": "~0.1.8",
+    "grunt": "~0.4.1",
+    "grunt-shell": "~0.2.2",
+    "grunt-coffeelint": "0.0.6",
+    "rimraf": "~2.1"
+  }
 }

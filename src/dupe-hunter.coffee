@@ -38,7 +38,7 @@ module.exports =
   #     * `repo` User and repo {String} in which to search (format: `name/repo`, ex: `atom/atom`)
   #
   # Returns the query {String}.
-  formatQuery: (text, options) ->
+  formatQuery: (text, options = {}) ->
     switch
       when options.repo?
         "#{text} repo:#{options.repo}"
